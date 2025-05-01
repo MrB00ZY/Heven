@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graffiti Background Placeholder</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(45deg, #111 25%, #222 25%, #222 50%, #111 50%, #111 75%, #222 75%, #222 100%);
+            background-size: 20px 20px;
+        }
+        .graffiti {
+            position: absolute;
+            font-family: 'Arial Black', sans-serif;
+            opacity: 0.1;
+            transform: rotate(-30deg);
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+        }
+        .g1 {
+            top: 20%;
+            left: 10%;
+        }
+        .g2 {
+            bottom: 25%;
+            right: 15%;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            z-index: 2;
+            position: relative;
+        }
+        p {
+            font-size: 1.2rem;
+            z-index: 2;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="placeholder">
+        <div class="graffiti g1">Heven</div>
+        <div class="graffiti g2">Faith</div>
+        <h1>GRAFFITI BACKGROUND</h1>
+        <p>Background Texture Placeholder</p>
+    </div>
+</body>
+</html>

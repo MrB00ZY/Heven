@@ -1,0 +1,14 @@
+This directory contains the following placeholder images needed for the HEVEN website:
+
+1. ghost-tshirt.jpg - The main product image for the Heven Ghost Oversized T-shirt
+2. hero-bg.jpg - Background image for the hero section
+3. graffiti-overlay.png - Texture overlay for the hero section 
+4. graffiti-bg.jpg - Background texture for the contact section
+
+Replace these placeholders with actual images when available. 
+The recommended dimensions are:
+- Product images: 800x1000px (4:5 ratio)
+- Hero background: 1920x1080px (16:9 ratio)
+- Texture overlays: 1920x1080px (16:9 ratio)
+
+For best results, ensure product images have a transparent or consistent background.
