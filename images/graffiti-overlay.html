@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graffiti Overlay Placeholder</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .placeholder {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .placeholder:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(255,255,255,0.1) 20px, rgba(255,255,255,0.1) 40px);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+        p {
+            font-size: 1.2rem;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="placeholder">
+        <h1>GRAFFITI OVERLAY</h1>
+        <p>Texture Overlay Placeholder</p>
+    </div>
+</body>
+</html>
