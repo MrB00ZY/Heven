@@ -3,6 +3,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const header = document.querySelector('header');
+    const heroSection = document.querySelector('.hero');
+    const prevBtn = document.querySelector('.hero-nav.prev');
+    const nextBtn = document.querySelector('.hero-nav.next');
+    
+    // Hero images for slider
+    const heroImages = [
+        'images/hevenpic3.jpg',
+        'images/hevenpic4.jpg',
+        'images/hevenpic5.jpg',
+        'images/hevenpic6.jpg',
+        'images/hevenpic8.jpg'
+    ];
+    
+    let currentHeroIndex = 0;
     const cartButton = document.querySelector('.cart a');
     const cartModal = document.getElementById('cart-modal');
     const productModal = document.getElementById('product-modal');
@@ -24,6 +38,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize elements that might not exist yet
     initializeElements();
+    
+    // Hero slider functionality
+    if (prevBtn && nextBtn) {
+        // Previous image
+        prevBtn.addEventListener('click', function() {
+            currentHeroIndex = (currentHeroIndex === 0) ? 
+                heroImages.length - 1 : currentHeroIndex - 1;
+            updateHeroImage();
+        });
+        
+        // Next image
+        nextBtn.addEventListener('click', function() {
+            currentHeroIndex = (currentHeroIndex === heroImages.length - 1) ? 
+                0 : currentHeroIndex + 1;
+            updateHeroImage();
+        });
+        
+        // Update hero image function
+        function updateHeroImage() {
+            heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('${heroImages[currentHeroIndex]}')`;
+        }
+    }
     
     // Product gallery functionality
     const viewGalleryBtn = document.querySelector('.view-gallery');
